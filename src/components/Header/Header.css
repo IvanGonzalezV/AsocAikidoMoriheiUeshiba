@@ -10,7 +10,8 @@
     /* border: 10px solid darkorange; */
     box-sizing: border-box;
     gap: 1rem;
-    padding: 1rem;
+    /* padding: 1rem; */
+    padding-left: 5em;
 }
 
 .header-text {
