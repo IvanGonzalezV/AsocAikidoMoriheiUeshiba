@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+.App {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.media-slider {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  /* Mantén el tamaño original del slider */
+}
+
+.media-slider img,
+.media-slider video {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}

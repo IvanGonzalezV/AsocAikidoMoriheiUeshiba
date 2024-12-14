@@ -1,0 +1,81 @@
+.Header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    /* justify-content: center; */
+    align-items: center;
+    justify-items: center;
+    background-color: #F4F4F4;
+    width: 100%;
+    min-height: 15vh;
+    /* border: 10px solid darkorange; */
+    box-sizing: border-box;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.header-text h1,
+h2 {
+    color: black;
+}
+
+.Header img {
+    width: 100px;
+    /* La imagen ocupa el 100% del ancho del contenedor */
+    height: auto;
+    /* La imagen ocupa el 100% de la altura del contenedor */
+    object-fit: contain;
+    /* Ajusta la imagen sin distorsionarla, puede recortarse */
+}
+
+#upper,
+#mid {
+    width: 90%;
+    /* El ancho de los elementos se ajusta al 90% del contenedor */
+    max-width: 400px;
+    /* Máximo ancho para evitar que se estire demasiado */
+    position: relative;
+    /* Usamos relative en lugar de absolute para mantenerlos dentro del contenedor */
+    color: #7A7A7A;
+    font-size: 1.1rem;
+    /* Tamaño de fuente relativo */
+    margin-left: 3vh;
+    text-align: center;
+    /* Centra el texto dentro de los elementos */
+}
+
+.nav-list {
+    display: flex;
+    /* Usamos flexbox para poner los elementos en línea */
+    justify-content: space-around;
+    /* Espaciado entre los elementos */
+    padding: 0;
+    /* Elimina el padding predeterminado */
+    margin: 0;
+    /* Elimina el margen predeterminado */
+    list-style: none;
+    /* Elimina los puntos de la lista */
+    text-decoration: none;
+    gap: 1rem;
+}
+
+.nav-list li {
+    margin-right: 3vh;
+    /* Espaciado de 3vh entre los elementos */
+    font-size: 1.1rem;
+    /* Tamaño de fuente relativo */
+    color: #7A7A7A;
+    text-decoration: none;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: inherit;
+}
+

@@ -1,0 +1,35 @@
+/* src/components/Body/Body.css */
+
+.body-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr 2fr;
+    /* Define las proporciones de las columnas */
+    gap: 1rem;
+    /* Espacio entre columnas */
+    padding: 2rem;
+    /* Espacio alrededor del contenedor */
+}
+
+.left-column,
+.middle-column,
+.right-column {
+    padding: 1rem;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.left-column {
+    background-color: #e0e0e0;
+    /* Color de fondo de la primera columna */
+}
+
+.middle-column {
+    background-color: #c0c0c0;
+    /* Color de fondo de la columna central */
+}
+
+.right-column {
+    background-color: #a0a0a0;
+    /* Color de fondo de la tercera columna */
+}
