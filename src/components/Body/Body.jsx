@@ -8,6 +8,7 @@ import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import dojoImage from "../../assets/dojo.png";
+import kanjiImage from "../../assets/Pics/Kanji-Aikido-PNG-Image.png"
 import { Link } from "react-router-dom"; // Importa Link
 
 const Body = () => {
@@ -48,10 +49,19 @@ const Body = () => {
 
        {/* Envolver todo el contenido en un Link */}
       <Link to="/que-es-aikido" className="middle-column"> {/* Link hacia la ruta "/que-es-aikido" */}
+      <img src={kanjiImage} alt="aikido-kanji" className="kanji-image" />
+      <div>
         <h2>Que es Aikido?</h2>
         <p>
-          Aikido es el Arte Marcial creado por nuestro fundador Morihei Ueshiba
+          El Aikido es un arte marcial único que enseña la defensa mediante técnicas fluidas de balance y equilibrio, transformando la agresión del oponente en movimiento continuo. 
         </p>
+        <p>Más que una práctica física, el Aikido cultiva la mente y el espíritu, promoviendo valores como la paz, la armonía y el respeto.
+        </p>
+        <p> No existen limitaciones de edad o género, lo que lo convierte en una disciplina accesible para todos, con su enfoque en la autodefensa sin violencia, el Aikido es ideal para quienes buscan fortalecer cuerpo y mente mientras encuentran serenidad en su vida diaria.
+        </p>
+      </div>
+        {/* Usar la etiqueta img para la imagen */}
+        
       </Link>
 
       <div className="right-column">

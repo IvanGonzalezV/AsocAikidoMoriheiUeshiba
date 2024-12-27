@@ -38,7 +38,17 @@ a {
 .middle-column {
     background-color: #c0c0c0;
     /* Color de fondo de la columna central */
-}
+    display: flex;
+        /* Usamos flexbox */
+        align-items: center;
+        /* Centra los elementos verticalmente */
+        justify-content: start;
+        /* Alinea los elementos al principio */
+        gap: 1rem;
+        /* Espacio entre la imagen y el texto */
+        padding: 1rem;
+        /* Agrega un poco de espacio alrededor */
+    }
 
 .right-column {
     background-color: #a0a0a0;
@@ -67,4 +77,27 @@ a {
     /* Los enlaces heredarán el color de su contenedor */
     font-size: inherit;
     /* Los enlaces heredarán el tamaño de la fuente */
+}
+
+.kanji-image {
+    width: 100%;
+    /* Ajusta el tamaño al 100% del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    max-width: 30%;
+    /* Limita el tamaño máximo */
+    margin-right: 1rem;
+    /* Espacio entre la imagen y el texto */
+}
+
+/* Asegúrate de que el texto tenga el formato adecuado */
+.middle-column h2 {
+    margin-bottom: 0.5rem;
+    /* Espacio debajo del título */
+}
+
+.middle-column p {
+    margin: 0;
+    /* Elimina el margen por defecto del párrafo */
+    margin-bottom: 1rem;
 }
