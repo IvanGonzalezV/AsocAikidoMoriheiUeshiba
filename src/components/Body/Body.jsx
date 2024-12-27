@@ -46,12 +46,13 @@ const Body = () => {
         </Card>
       </div>
 
-      <div className="middle-column">
+       {/* Envolver todo el contenido en un Link */}
+      <Link to="/que-es-aikido" className="middle-column"> {/* Link hacia la ruta "/que-es-aikido" */}
         <h2>Que es Aikido?</h2>
         <p>
           Aikido es el Arte Marcial creado por nuestro fundador Morihei Ueshiba
         </p>
-      </div>
+      </Link>
 
       <div className="right-column">
         <h3>Clases de Aikido</h3>
@@ -62,3 +63,4 @@ const Body = () => {
 };
 
 export default Body;
+

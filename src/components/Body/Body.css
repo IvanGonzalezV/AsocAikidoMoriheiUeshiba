@@ -1,3 +1,13 @@
+a {
+    text-decoration: none;
+    /* Elimina el subrayado de todos los enlaces */
+    color: inherit;
+    /* Los enlaces heredarán el color de su contenedor */
+    font-size: inherit;
+    /* Los enlaces heredarán el tamaño de la fuente */
+}
+
+
 .body-container {
     display: grid;
     grid-template-columns: 3fr 2fr 2fr;
@@ -34,4 +44,27 @@
     background-color: #a0a0a0;
     /* Color de fondo de la tercera columna */
     margin-right: 25%;
+}
+
+
+
+
+/* Eliminar subrayado y mantener el estilo de texto original */
+.middle-column a {
+    text-decoration: none;
+    /* Elimina el subrayado */
+    color: inherit;
+    /* Hereda el color del contenedor */
+    font-size: inherit;
+    /* Hereda el tamaño de la fuente */
+}
+
+/* Estilos generales para enlaces en el proyecto */
+a {
+    text-decoration: none;
+    /* Elimina el subrayado de todos los enlaces */
+    color: inherit;
+    /* Los enlaces heredarán el color de su contenedor */
+    font-size: inherit;
+    /* Los enlaces heredarán el tamaño de la fuente */
 }
