@@ -80,3 +80,14 @@ h2 {
     color: inherit;
 }
 
+/* Elimina el subrayado en cualquier enlace dentro de Header */
+.Header a {
+    text-decoration: none;
+    /* Elimina el subrayado */
+}
+
+.Header a:focus,
+.Header a:hover {
+    text-decoration: none;
+    /* Mantiene el estilo sin subrayado al pasar el mouse o hacer foco */
+}

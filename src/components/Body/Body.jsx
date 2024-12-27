@@ -7,6 +7,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
+import dojoImage from "../../assets/dojo.png";
+import { Link } from "react-router-dom"; // Importa Link
 
 const Body = () => {
   return (
@@ -18,7 +20,7 @@ const Body = () => {
             <CardMedia
               component="img"
               height="140"
-              image="https://via.placeholder.com/345x140" // Aquí pon la imagen que quieras
+              image={dojoImage} // Aquí pon la imagen que quieras
               alt="Dojo Roma"
             />
             <CardContent>
