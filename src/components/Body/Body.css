@@ -10,7 +10,7 @@ a {
 
 .body-container {
     display: grid;
-    grid-template-columns: 3fr 2fr 2fr;
+    grid-template-columns: 2fr 3fr 2fr;
     /* Define las proporciones de las columnas */
     gap: 1rem;
     /* Espacio entre columnas */
@@ -18,6 +18,8 @@ a {
     /* Espacio alrededor del contenedor */
     background-color: white;
     width: 100%;
+    align-items: flex-start;
+        /* Asegura que las columnas no tengan la misma altura */
 }
 
 .left-column,
@@ -33,6 +35,8 @@ a {
     background-color: #e0e0e0;
     /* Color de fondo de la primera columna */
     margin-left: 12%;
+    height: auto;
+    /* Ajusta la altura al contenido */
 }
 
 .middle-column {
@@ -54,6 +58,8 @@ a {
     background-color: #a0a0a0;
     /* Color de fondo de la tercera columna */
     margin-right: 25%;
+    height: auto;
+    /* Ajusta la altura al contenido */
 }
 
 
@@ -84,7 +90,7 @@ a {
     /* Ajusta el tamaño al 100% del contenedor */
     height: auto;
     /* Mantiene la proporción de la imagen */
-    max-width: 30%;
+    max-width: 25%;
     /* Limita el tamaño máximo */
     margin-right: 1rem;
     /* Espacio entre la imagen y el texto */

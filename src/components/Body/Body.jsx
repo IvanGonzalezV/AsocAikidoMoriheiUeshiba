@@ -53,7 +53,7 @@ const Body = () => {
       <div>
         <h2>Que es Aikido?</h2>
         <p>
-          El Aikido es un arte marcial único que enseña la defensa mediante técnicas fluidas de balance y equilibrio, transformando la agresión del oponente en movimiento continuo. 
+          El Aikido es un arte marcial que enseña y promueve la defensa mediante técnicas que utilizan el balance y equilibrio de manera fluida para transformar una agresión en un movimiento continuo. 
         </p>
         <p>Más que una práctica física, el Aikido cultiva la mente y el espíritu, promoviendo valores como la paz, la armonía y el respeto.
         </p>

@@ -1,5 +1,5 @@
 import "./Header.css";
-import logo from "../../assets/ESCUDO.jpg";
+import logo from "../../assets/ESCUDO2.png";
 import { Link } from "react-router-dom"; // Se importa Link de React Router.
 
 const Header = () => {
