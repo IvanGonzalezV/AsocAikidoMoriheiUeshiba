@@ -1,11 +1,11 @@
-import "./Header.css";
+import "./NavBar.css";
 import logo from "../../assets/ESCUDO2.png";
 import { Link } from "react-router-dom"; // Se importa Link de React Router.
 
-const Header = () => {
+const NavBar = () => {
   return (
-    <div className="Header">
-        <div className="header-text">
+    <div className="NavBar">
+        <div className="NavBar-text">
           <Link to="/" id="upper">  {/* Enlace hacia la ruta principal */}
             <h1 id="upper">Asociacion de Aikido Morihei Ueshiba A.C.</h1> 
           </Link>  
@@ -26,4 +26,4 @@ const Header = () => {
   )
 }
 
-export default Header
+export default NavBar

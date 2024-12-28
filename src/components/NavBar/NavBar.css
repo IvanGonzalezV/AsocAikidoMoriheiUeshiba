@@ -1,4 +1,4 @@
-.Header {
+.NavBar {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     /* justify-content: center; */
@@ -14,19 +14,19 @@
     padding-left: 5em;
 }
 
-.header-text {
+.NavBar-text {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-.header-text h1,
+.NavBar-text h1,
 h2 {
     color: black;
 }
 
-.Header img {
+.NavBar img {
     width: 100px;
     /* La imagen ocupa el 100% del ancho del contenedor */
     height: auto;
@@ -81,13 +81,13 @@ h2 {
 }
 
 /* Elimina el subrayado en cualquier enlace dentro de Header */
-.Header a {
+.NavBar a {
     text-decoration: none;
     /* Elimina el subrayado */
 }
 
-.Header a:focus,
-.Header a:hover {
+.NavBar a:focus,
+.NavBar a:hover {
     text-decoration: none;
     /* Mantiene el estilo sin subrayado al pasar el mouse o hacer foco */
 }

@@ -4,7 +4,7 @@ import "./App.css";
  
 //COMPONENTS
 
-import Header from "./components/Header/Header";
+import NavBar from "./components/NavBar/NavBar";
 import MediaSlider from "./components/MediaSlider/MediaSlider";
 import Body from "./components/Body/Body";
 import AikidoMeaning from "./components/AikidoMeaning/AikidoMeaning"; // Se agregó el nuevo componente.
@@ -15,7 +15,7 @@ const App = () => {
   return(
     <Router>
       <div className="App">
-        <Header />
+        <NavBar />
         <Routes>
         {/* Ruta principal */}
         <Route path="/" element={<><MediaSlider /><Body /></>} />
