@@ -8,6 +8,7 @@ import NavBar from "./components/NavBar/NavBar";
 import MediaSlider from "./components/MediaSlider/MediaSlider";
 import Body from "./components/Body/Body";
 import AikidoMeaning from "./components/AikidoMeaning/AikidoMeaning"; // Se agregó el nuevo componente.
+import Footer from "./components/Footer/Footer";
 
 const name = "AsocMoriheiUeshiba"
 
@@ -22,6 +23,7 @@ const App = () => {
         {/* Nueva ruta para la página "¿Qué es AIKIDO?" */}
         <Route path="/que-es-aikido" element={<AikidoMeaning />} />
         </Routes>
+        <Footer />
       </div>
     </Router>  
     )

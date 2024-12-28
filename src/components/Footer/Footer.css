@@ -1,0 +1,92 @@
+.Footer {
+    display: flex;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #F4F4F4;
+    width: 100%;
+    min-height: 15vh;
+    box-sizing: border-box;
+    gap: 1rem;
+    /* padding: 1rem; */
+    padding-left: 5em;
+    padding-right: 5em;
+}
+
+.Footer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Footer-text h1,
+h2 {
+    color: black;
+}
+
+.Footer img {
+    width: 80px;
+    /* La imagen ocupa el 100% del ancho del contenedor */
+    height: auto;
+    /* La imagen ocupa el 100% de la altura del contenedor */
+    object-fit: contain;
+    /* Ajusta la imagen sin distorsionarla, puede recortarse */
+}
+
+#upper,
+#mid {
+    width: 90%;
+    /* El ancho de los elementos se ajusta al 90% del contenedor */
+    max-width: 400px;
+    /* Máximo ancho para evitar que se estire demasiado */
+    position: relative;
+    /* Usamos relative en lugar de absolute para mantenerlos dentro del contenedor */
+    color: #7A7A7A;
+    font-size: 1.1rem;
+    /* Tamaño de fuente relativo */
+    margin-left: 3vh;
+    text-align: center;
+    /* Centra el texto dentro de los elementos */
+}
+
+.Footer-list {
+    display: flex;
+    /* Usamos flexbox para poner los elementos en línea */
+    flex-direction: column;
+    /* Coloca los elementos en una columna */
+    align-items: flex-start;
+    /* Alinea los elementos al inicio (izquierda) */
+    padding: 0;
+    /* Elimina el padding predeterminado */
+    margin: 0;
+    /* Elimina el margen predeterminado */
+    list-style: none;
+    /* Elimina los puntos de la lista */
+    text-decoration: none;
+    gap: 1rem;
+}
+
+.Footer-list li {
+    font-size: 1.1rem;
+    /* Tamaño de fuente relativo */
+    color: #7A7A7A;
+    text-decoration: none;
+}
+
+.Footer-list a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Elimina el subrayado en cualquier enlace dentro de Header */
+.Footer a {
+    text-decoration: none;
+    /* Elimina el subrayado */
+}
+
+.Footer a:focus,
+.Footer a:hover {
+    text-decoration: none;
+    /* Mantiene el estilo sin subrayado al pasar el mouse o hacer foco */
+}
