@@ -6,7 +6,7 @@ import grados from "../../assets/graduacion.png"
 const AikidoMeaning = () => {
   return (
     <div className="aikido-meaning-container">
-    <img class="img-o" src={O} alt="O-removebg.png" />
+    <img className="img-o" src={O} alt="O-removebg.png" />
     <div className="aikido-meaning">
       <h1>¿AIKIDO, Qué es?</h1>
       <p>
