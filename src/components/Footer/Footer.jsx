@@ -11,7 +11,7 @@ const Footer = () => {
 
        <ul className="Footer-list">
           <li><Link to="/que-es-aikido">Que es AIKIDO?</Link></li>
-          <li><a href="#">Sobre Nosotros</a></li>
+          <li><Link to="Nosotros">Sobre Nosotros</Link></li>
           <li><a href="#">Nuestro Dojo</a></li>
           <li><a href="#">Contactanos</a></li>
         </ul>
@@ -19,21 +19,21 @@ const Footer = () => {
 
         <ul className="Footer-list">
           <li><Link to="/que-es-aikido">Que es AIKIDO?</Link></li>
-          <li><a href="#">Sobre Nosotros</a></li>
+          <li><Link to="Nosotros">Sobre Nosotros</Link></li>
           <li><a href="#">Nuestro Dojo</a></li>
           <li><a href="#">Contactanos</a></li>
         </ul>
 
         <ul className="Footer-list">
           <li><Link to="/que-es-aikido">Que es AIKIDO?</Link></li>
-          <li><a href="#">Sobre Nosotros</a></li>
+          <li><Link to="Nosotros">Sobre Nosotros</Link></li>
           <li><a href="#">Nuestro Dojo</a></li>
           <li><a href="#">Contactanos</a></li>
         </ul>
 
         <ul className="Footer-list">
           <li><Link to="/que-es-aikido">Que es AIKIDO?</Link></li>
-          <li><a href="#">Sobre Nosotros</a></li>
+          <li><Link to="Nosotros">Sobre Nosotros</Link></li>
           <li><a href="#">Nuestro Dojo</a></li>
           <li><a href="#">Contactanos</a></li>
         </ul>

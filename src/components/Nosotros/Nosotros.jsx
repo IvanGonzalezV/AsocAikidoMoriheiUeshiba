@@ -15,8 +15,8 @@ const Nosotros = () => {
             (Vicepresidente)
           </strong>
           , está <strong>legalmente constituida</strong> y reconocida ante
-          Notario Público por{" "}
-          <strong>el Instituto del Deporte de la CDMX</strong> y afiliada
+          Notario Público y por{" "}
+          <strong>el Instituto del Deporte de la CDMX</strong>, afiliada
           también a la <strong>Federación Mexicana de Aikido A.C.</strong> así
           como al <strong>Aikikai Hombu Dojo en Japón</strong> por lo que{" "}
           <strong>
