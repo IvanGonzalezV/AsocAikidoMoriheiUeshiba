@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; // Se
 import "./App.css";
  
 //COMPONENTS
-
 import NavBar from "./components/NavBar/NavBar";
 import MediaSlider from "./components/MediaSlider/MediaSlider";
 import Body from "./components/Body/Body";
 import AikidoMeaning from "./components/AikidoMeaning/AikidoMeaning"; // Se agregó el nuevo componente.
 import Footer from "./components/Footer/Footer";
+import Nosotros from "./components/Nosotros/Nosotros";
 
 const name = "AsocMoriheiUeshiba"
 
@@ -22,6 +22,8 @@ const App = () => {
         <Route path="/" element={<><MediaSlider /><Body /></>} />
         {/* Nueva ruta para la página "¿Qué es AIKIDO?" */}
         <Route path="/que-es-aikido" element={<AikidoMeaning />} />
+        {/* Nueva ruta para la página "Nosotros" */}
+        <Route path="/nosotros" element={<Nosotros />} />
         </Routes>
         <Footer />
       </div>

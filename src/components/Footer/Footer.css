@@ -1,8 +1,9 @@
 .Footer {
     display: flex;
+    flex-direction: row;   /* Mantén los elementos en una fila */
     grid-template-columns: 1fr 2fr 1fr;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     background-color: #F4F4F4;
     width: 100%;
     min-height: 15vh;
@@ -57,7 +58,7 @@ h2 {
     /* Coloca los elementos en una columna */
     align-items: flex-start;
     /* Alinea los elementos al inicio (izquierda) */
-    padding: 0;
+    padding: 1rem;
     /* Elimina el padding predeterminado */
     margin: 0;
     /* Elimina el margen predeterminado */
@@ -68,7 +69,7 @@ h2 {
 }
 
 .Footer-list li {
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     /* Tamaño de fuente relativo */
     color: #7A7A7A;
     text-decoration: none;
