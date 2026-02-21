@@ -39,25 +39,29 @@
 }
 
 .grados-img {
-    width: 550px;
-    /* Aumenta el tamaño de la imagen de grados */
+    width: 100%;
+    max-width: 550px;
     height: auto;
-    /* Mantén la proporción */
     margin: 20px 0;
-    /* Puedes ajustar el margen si es necesario */
     display: block;
     object-fit: contain;
-    /* Asegura que la imagen se mantenga proporcional */
 }
 
 .img-o {
-    width: 250px;
-    /* Aumenta el tamaño de la imagen de grados */
-    height: auto;
-    /* Mantén la proporción */
-    margin: 20px 0;
-    /* Puedes ajustar el margen si es necesario */
-    display: block;
-    object-fit: contain;
-    /* Asegura que la imagen se mantenga proporcional */
+        width: 100%;
+        max-width: 250px;
+        height: auto;
+        margin: 20px 0;
+        display: block;
+        object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .grados-img {
+        max-width: 90%;
+    }
+
+    .img-o {
+        max-width: 60%;
+    }
 }
