@@ -1,25 +1,17 @@
 a {
     text-decoration: none;
-    /* Elimina el subrayado de todos los enlaces */
     color: inherit;
-    /* Los enlaces heredarán el color de su contenedor */
     font-size: inherit;
-    /* Los enlaces heredarán el tamaño de la fuente */
 }
-
 
 .body-container {
     display: grid;
-    grid-template-columns: 2fr 3fr 2fr;
-    /* Define las proporciones de las columnas */
+    grid-template-columns: 1fr;
     gap: 1rem;
-    /* Espacio entre columnas */
-    padding: 2rem;
-    /* Espacio alrededor del contenedor */
+    padding: 1rem;
     background-color: white;
     width: 100%;
     align-items: flex-start;
-        /* Asegura que las columnas no tengan la misma altura */
 }
 
 .left-column,
@@ -33,33 +25,37 @@ a {
 
 .left-column {
     background-color: #e0e0e0;
-    /* Color de fondo de la primera columna */
-    margin-left: 12%;
     height: auto;
-    /* Ajusta la altura al contenido */
+    position: relative;
+    overflow: visible !important;
+}
+
+.left-column img {
+    transition: all 0.3s ease-in-out;
+    transform-origin: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.left-column img:hover {
+    transform: scale(1.2) translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
 
 .middle-column {
     background-color: #c0c0c0;
-    /* Color de fondo de la columna central */
     display: flex;
-        /* Usamos flexbox */
-        align-items: center;
-        /* Centra los elementos verticalmente */
-        justify-content: start;
-        /* Alinea los elementos al principio */
-        gap: 1rem;
-        /* Espacio entre la imagen y el texto */
-        padding: 1rem;
-        /* Agrega un poco de espacio alrededor */
-    }
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+}
 
 .right-column {
     background-color: #a0a0a0;
-    /* Color de fondo de la tercera columna */
-    margin-right: 25%;
     height: auto;
-    /* Ajusta la altura al contenido */
 }
 
 
@@ -86,14 +82,69 @@ a {
 }
 
 .kanji-image {
-    width: 100%;
-    /* Ajusta el tamaño al 100% del contenedor */
-    height: auto;
-    /* Mantiene la proporción de la imagen */
-    max-width: 25%;
-    /* Limita el tamaño máximo */
-    margin-right: 1rem;
-    /* Espacio entre la imagen y el texto */
+        width: 100%;
+        height: auto;
+        max-width: 150px;
+        margin-right: 1rem;
+}
+
+@media (min-width: 900px) {
+    .body-container {
+        grid-template-columns: 2fr 3fr 2fr;
+        padding: 2rem;
+    }
+
+    .kanji-image {
+        max-width: 25%;
+    }
+
+    .left-column {
+        margin-left: 0;
+    }
+
+    .right-column {
+        margin-right: 0;
+    }
+}
+
+/* Mobile / tablet: apilar imagen encima del texto en la columna central */
+@media (max-width: 900px) {
+    .middle-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .middle-column > div {
+        width: 100%;
+    }
+
+    .kanji-image {
+        width: 60%;
+        max-width: 220px;
+        margin: 0 auto 1rem auto;
+        display: block;
+    }
+
+    .left-column {
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem;
+    }
+
+    .right-column {
+        width: 100%;
+        padding: 0.5rem 1rem;
+        text-align: center;
+    }
+
+    .body-container {
+        gap: 1rem;
+        padding: 0.8rem;
+    }
 }
 
 /* Asegúrate de que el texto tenga el formato adecuado */

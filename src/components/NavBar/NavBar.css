@@ -1,17 +1,15 @@
 .NavBar {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
-    /* justify-content: center; */
     align-items: center;
     justify-items: center;
     background-color: #F4F4F4;
     width: 100%;
     min-height: 15vh;
-    /* border: 10px solid darkorange; */
     box-sizing: border-box;
     gap: 1rem;
-    /* padding: 1rem; */
-    padding-left: 5em;
+    padding-left: 3rem;
+    padding-right: 3rem;
 }
 
 .NavBar-text {
@@ -22,17 +20,14 @@
 }
 
 .NavBar-text h1,
-h2 {
+.NavBar-text h2 {
     color: black;
 }
 
 .NavBar img {
     width: 100px;
-    /* La imagen ocupa el 100% del ancho del contenedor */
     height: auto;
-    /* La imagen ocupa el 100% de la altura del contenedor */
     object-fit: contain;
-    /* Ajusta la imagen sin distorsionarla, puede recortarse */
 }
 
 #upper,
@@ -64,6 +59,30 @@ h2 {
     /* Elimina los puntos de la lista */
     text-decoration: none;
     gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .NavBar {
+        grid-template-columns: 1fr;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        min-height: auto;
+        gap: 0.5rem;
+    }
+
+    .NavBar img {
+        width: 70px;
+    }
+
+    .nav-list {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .NavBar-text {
+        text-align: center;
+    }
 }
 
 .nav-list li {

@@ -1,8 +1,8 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
-
 
 .App {
   background-color: black;
@@ -15,14 +15,28 @@
 .media-slider {
   position: relative;
   margin: 0 auto;
-  width: 80%;
-  /* Mantén el tamaño original del slider */
+  width: 90%;
+  max-width: 1200px;
 }
 
 .media-slider img,
 .media-slider video {
   width: 100%;
-  height: 400px;
+  height: auto;
+  aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .media-slider {
+    width: 95%;
+  }
+
+  .media-slider img,
+  .media-slider video {
+    aspect-ratio: 16/9;
+    max-height: 260px;
+    object-fit: cover;
+  }
 }
