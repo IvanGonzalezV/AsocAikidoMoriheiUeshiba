@@ -60,8 +60,20 @@ const MediaSlider = () => {
         <div>
           <img src={image4} alt="Imagen 2" />
         </div>
-        <div>
-          <video controls>
+        <div key="video-slide">
+          <video 
+            preload="metadata"
+            controls 
+            muted 
+            style={{
+              width: "100%",
+              height: "auto",
+              maxHeight: "400px",
+              borderRadius: "8px",
+              objectFit: "cover",
+              display: "block"
+            }}
+          >
             <source src={video1} type="video/mp4" />
             Tu navegador no soporta el video.
           </video>

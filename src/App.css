@@ -17,15 +17,17 @@
   margin: 0 auto;
   width: 90%;
   max-width: 1200px;
+  background-color: #1a1a1a;
 }
 
 .media-slider img,
 .media-slider video {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16/9;
+  width: 100% !important;
+  height: auto !important;
+  max-height: 400px !important;
   object-fit: cover;
   border-radius: 8px;
+  display: block;
 }
 
 @media (max-width: 768px) {

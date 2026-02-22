@@ -1,17 +1,33 @@
+.media-slider .slick-slide {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+}
+
+.media-slider .slick-slide div {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .media-slider {
     position: relative;
     width: 90%;
     max-width: 1200px;
     margin: .3rem auto;
+    background-color: #1a1a1a;
 }
 
 .media-slider img,
 .media-slider video {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
+    width: 100% !important;
+    height: auto !important;
+    max-height: 400px !important;
     object-fit: cover;
     border-radius: 8px;
+    display: block;
 }
 
 .overlay {
