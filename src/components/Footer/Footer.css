@@ -1,17 +1,18 @@
 .Footer {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: auto repeat(4, minmax(0, 1fr));
+    align-items: center;
     background-color: #F4F4F4;
     width: 100%;
+    min-height: 11.4vh;
     box-sizing: border-box;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1.5rem;
+    padding: 1.5rem 2rem;
 }
 
 .Footer > a {
-    grid-column: 1 / -1;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
