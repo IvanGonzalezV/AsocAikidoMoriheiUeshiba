@@ -15,8 +15,8 @@ const NavBar = () => {
 
         <ul className="nav-list">
           <li><Link to="/que-es-aikido">Que es AIKIDO?</Link></li>
-          <li><Link to="Nosotros">Sobre Nosotros</Link></li>
-          <li><a href="#">Nuestro Dojo</a></li>
+          <li><Link to="/nosotros">Sobre Nosotros</Link></li>
+          <li><Link to="/nuestro-dojo">Nuestro Dojo</Link></li>
           <li><a href="#">Contactanos</a></li>
         </ul>
         <a href="#">
