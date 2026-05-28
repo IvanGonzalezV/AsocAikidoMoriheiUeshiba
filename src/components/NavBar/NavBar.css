@@ -8,8 +8,7 @@
     min-height: 15vh;
     box-sizing: border-box;
     gap: 1rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: 1rem 2rem;
 }
 
 .NavBar-text {
@@ -17,7 +16,15 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
 }
+
+.NavBar-text h1,
+.NavBar-text h2 {
+    width: 100%;
+    max-width: 100%;
+}
+
 
 .NavBar-text h1,
 .NavBar-text h2 {
@@ -48,24 +55,25 @@
 
 .nav-list {
     display: flex;
-    /* Usamos flexbox para poner los elementos en línea */
     justify-content: space-around;
-    /* Espaciado entre los elementos */
     padding: 0;
-    /* Elimina el padding predeterminado */
     margin: 0;
-    /* Elimina el margen predeterminado */
     list-style: none;
-    /* Elimina los puntos de la lista */
     text-decoration: none;
     gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-list li {
+    margin: 0;
+    font-size: clamp(0.9rem, 1vw + 0.3rem, 1.1rem);
+    color: #7A7A7A;
 }
 
 @media (max-width: 768px) {
     .NavBar {
         grid-template-columns: 1fr;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding: 1rem;
         min-height: auto;
         gap: 0.5rem;
     }
@@ -75,9 +83,19 @@
     }
 
     .nav-list {
-        flex-wrap: wrap;
         justify-content: center;
         gap: 0.5rem;
+    }
+
+    .nav-list li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list a {
+        display: block;
+        width: 100%;
+        padding: 0.5rem 0;
     }
 
     .NavBar-text {
@@ -85,14 +103,6 @@
     }
 }
 
-.nav-list li {
-    margin-right: 3vh;
-    /* Espaciado de 3vh entre los elementos */
-    font-size: 1.1rem;
-    /* Tamaño de fuente relativo */
-    color: #7A7A7A;
-    text-decoration: none;
-}
 
 .nav-list a {
     text-decoration: none;

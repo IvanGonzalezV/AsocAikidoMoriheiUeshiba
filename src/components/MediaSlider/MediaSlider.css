@@ -14,9 +14,9 @@
 
 .media-slider {
     position: relative;
-    width: 90%;
-    max-width: 1200px;
-    margin: .3rem auto;
+    width: 100%;
+    max-width: none;
+    margin: 0;
     background-color: #1a1a1a;
 }
 

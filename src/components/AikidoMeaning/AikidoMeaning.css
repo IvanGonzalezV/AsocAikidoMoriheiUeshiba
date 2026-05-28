@@ -1,41 +1,34 @@
 .aikido-meaning {
     background-color: #e0e0e0;
     width: 100%;
+    max-width: 1100px;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centra horizontalmente */
-    padding: 20px;
-    /* Añadimos un padding uniforme */
+    padding: 24px;
     box-sizing: border-box;
-    /* Asegura que el padding no afecte al tamaño total */
 }
 
 .aikido-meaning h1,
 .aikido-meaning p {
     margin: 20px 0;
-    /* Margen uniforme arriba y abajo */
     text-align: justify;
-    /* Mantener el texto justificado */
+    line-height: 1.8;
 }
 
 .aikido-meaning-container {
     display: flex;
     flex-direction: column;
-    /* Los hijos se colocarán verticalmente */
     justify-content: center;
-    /* Centra verticalmente */
     align-items: center;
-    /* Centra horizontalmente */
     background-color: #e0e0e0;
     width: 100%;
     position: relative;
-    /* Asegúrate de no usar position: absolute */
     margin-top: 0px;
-        /* Añade un margen para separarla del navbar */
     max-width: 100%;
     height: auto;
+    padding: 1rem;
 }
 
 .grados-img {
