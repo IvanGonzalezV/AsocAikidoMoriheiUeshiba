@@ -1,0 +1,228 @@
+.our-dojo-page {
+    width: 100%;
+    min-height: calc(100vh - 80px);
+    padding: 2rem 1rem 3rem;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-dojo-content {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.our-dojo-card {
+    flex: 1 1 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.our-dojo-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #1a1a1a;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 14px 32px rgba(0, 0, 0, 0.18);
+}
+
+.our-dojo-clickable {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.our-dojo-card:hover .our-dojo-clickable {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.22);
+}
+
+.our-dojo-frame img,
+.our-dojo-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.our-dojo-frame video {
+    background-color: black;
+}
+
+.our-dojo-placeholder {
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.our-dojo-card span {
+    color: #333;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.our-dojo-explorer-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    padding: 1rem;
+}
+
+.our-dojo-explorer {
+    width: min(100%, 1100px);
+    background-color: #111;
+    border-radius: 20px;
+    padding: 1.25rem;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+}
+
+.explorer-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.explorer-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.our-dojo-explorer-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.our-dojo-explorer-frame {
+    flex: 1;
+    min-height: 470px;
+    background-color: #0d0d0d;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.our-dojo-explorer-frame img,
+.our-dojo-explorer-frame video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.explorer-nav {
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    font-size: 1.6rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.explorer-nav:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.explorer-label {
+    color: #ddd;
+    font-size: 0.95rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.explorer-label-main {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.explorer-label-subtitle {
+    font-size: 0.95rem;
+    color: #bfc4cd;
+    word-break: break-all;
+    max-width: 100%;
+}
+
+.explorer-help {
+    color: #a6aec5;
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+    .our-dojo-content {
+        gap: 1.25rem;
+    }
+    .our-dojo-explorer-frame {
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 860px) {
+    .our-dojo-page {
+        padding: 1.5rem 1rem 2rem;
+    }
+    .our-dojo-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .our-dojo-card {
+        width: 100%;
+        max-width: 720px;
+    }
+}
