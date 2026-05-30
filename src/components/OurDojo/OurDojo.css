@@ -12,18 +12,36 @@
     width: 100%;
     max-width: 1260px;
     display: flex;
-    gap: 1.8rem;
+    gap: 1rem;
     justify-content: center;
     align-items: stretch;
     flex-wrap: wrap;
 }
 
+@media (max-width: 860px) {
+    .our-dojo-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        justify-items: center;
+    }
+}
+
+@media (min-width: 861px) {
+    .our-dojo-content {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(286px, 1fr));
+        gap: 1rem;
+        justify-items: center;
+    }
+}
 .our-dojo-card {
-    flex: 1 1 378px;
+    flex: 1 1 286px;
+    max-width: 286px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.9rem;
+    gap: 0.55rem;
     cursor: pointer;
 }
 
@@ -263,6 +281,13 @@
     font-size: 0.9rem;
     text-align: center;
     margin-top: 0.5rem;
+}
+
+.our-dojo-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 18px;
 }
 
 @media (max-width: 1024px) {
