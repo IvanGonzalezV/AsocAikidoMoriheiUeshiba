@@ -17,7 +17,7 @@ const NavBar = () => {
           <li><Link to="/que-es-aikido">Que es AIKIDO?</Link></li>
           <li><Link to="/nosotros">Sobre Nosotros</Link></li>
           <li><Link to="/nuestro-dojo">Nuestro Dojo</Link></li>
-          <li><a href="#">Contactanos</a></li>
+          <li><Link to="/contactos">Contactanos</Link></li>
         </ul>
         <a href="#">
         <img src={logo} alt="O Sensei" />

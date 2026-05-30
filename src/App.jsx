@@ -10,6 +10,7 @@ import AikidoMeaning from "./components/AikidoMeaning/AikidoMeaning"; // Se agre
 import Footer from "./components/Footer/Footer";
 import Nosotros from "./components/Nosotros/Nosotros";
 import OurDojo from "./components/OurDojo/OurDojo";
+import Contactos from "./components/Contactos/Contactos";
 
 const name = "AsocMoriheiUeshiba"
 
@@ -26,6 +27,7 @@ const App = () => {
         {/* Nueva ruta para la página "Nosotros" */}
         <Route path="/nosotros" element={<Nosotros />} />
         <Route path="/nuestro-dojo" element={<OurDojo />} />
+        <Route path="/contactos" element={<Contactos />} />
         </Routes>
         <Footer />
       </div>

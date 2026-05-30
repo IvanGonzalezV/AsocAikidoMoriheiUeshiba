@@ -5,15 +5,15 @@ const getBaseName = (url) => url.split("/").pop() || "";
 
 const OurDojo = () => {
   const picUrls = useMemo(
-    () => Object.values(import.meta.glob("../../assets/Gallery/galPics/*.{png,jpg,jpeg,gif}", { eager: true, as: "url" })),
+    () => Object.values(import.meta.glob("../../assets/Gallery/galPics/*.{png,jpg,jpeg,gif}", { eager: true, query: '?url', import: 'default' })),
     []
   );
   const vidUrls = useMemo(
-    () => Object.values(import.meta.glob("../../assets/Gallery/galVids/*.{mp4,webm}", { eager: true, as: "url" })),
+    () => Object.values(import.meta.glob("../../assets/Gallery/galVids/*.{mp4,webm}", { eager: true, query: '?url', import: 'default' })),
     []
   );
   const semUrls = useMemo(
-    () => Object.values(import.meta.glob("../../assets/Gallery/galSeminary/*.{mp4,webm}", { eager: true, as: "url" })),
+    () => Object.values(import.meta.glob("../../assets/Gallery/galSeminary/*.{mp4,webm}", { eager: true, query: '?url', import: 'default' })),
     []
   );
 
