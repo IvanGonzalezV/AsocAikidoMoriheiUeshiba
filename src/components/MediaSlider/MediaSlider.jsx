@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -31,6 +31,10 @@ const PrevArrow = ({ onClick }) => {
 };
 
 const MediaSlider = () => {
+  const sliderRef = useRef(null);
+  const videoRef = useRef(null);
+  const [hasVideoEnded, setHasVideoEnded] = useState(false);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -43,11 +47,42 @@ const MediaSlider = () => {
     prevArrow: <PrevArrow />,
   };
 
+  const handleVideoTimeUpdate = (e) => {
+    const video = e.target;
+    // Si el video llegó al final (dentro del 1% del tiempo total)
+    if (video.duration > 0 && video.currentTime >= video.duration - 0.5) {
+      if (!hasVideoEnded) {
+        setHasVideoEnded(true);
+        setTimeout(() => {
+          if (sliderRef.current) {
+            sliderRef.current.slickNext();
+            setHasVideoEnded(false);
+          }
+        }, 500);
+      }
+    }
+  };
+
+  const handleVideoEnded = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickNext();
+      setHasVideoEnded(false);
+    }
+  };
+
+  const handleBeforeChange = () => {
+    // Reiniciar el video cuando se cambia de slide
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      setHasVideoEnded(false);
+    }
+  };
+
   return (
     <div className="media-slider">
       <div className="overlay left"></div> {/* Capa izquierda */}
       <div className="overlay right"></div> {/* Capa derecha */}
-      <Slider {...settings}>
+      <Slider ref={sliderRef} {...settings} beforeChange={handleBeforeChange}>
         <div>
           <img src={image1} alt="Imagen 1" />
         </div>
@@ -62,9 +97,13 @@ const MediaSlider = () => {
         </div>
         <div key="video-slide">
           <video 
+            ref={videoRef}
             preload="metadata"
             controls 
             muted 
+            autoPlay
+            onTimeUpdate={handleVideoTimeUpdate}
+            onEnded={handleVideoEnded}
             style={{
               width: "100%",
               height: "auto",

@@ -116,7 +116,7 @@ const OurDojo = () => {
               <div className="our-dojo-placeholder">No hay imágenes disponibles.</div>
             )}
           </div>
-          <span>IMAGENES</span>
+          {!isImageExplorerOpen && <span>IMAGENES</span>}
         </div>
 
         <div className="our-dojo-card" onClick={openVideoExplorer}>
@@ -134,7 +134,7 @@ const OurDojo = () => {
               <div className="our-dojo-placeholder">No hay videos disponibles.</div>
             )}
           </div>
-          <span>VIDEOS</span>
+          {!isVideoExplorerOpen && <span>VIDEOS</span>}
         </div>
       </div>
 
@@ -174,18 +174,37 @@ const OurDojo = () => {
               </button>
             </div>
             <div className="explorer-label">
-              {isImageExplorerOpen ? (
-                <>
-                  <div className="explorer-label-main">Imagen</div>
-                  <div className="explorer-label-subtitle">{getBaseName(picUrls[explorerImageIndex] || "")}</div>
-                </>
-              ) : (
-                <>
-                  <div className="explorer-label-main">Video</div>
-                  <div className="explorer-label-subtitle">{getBaseName(vidUrls[explorerVideoIndex] || "")}</div>
-                </>
-              )}
+              <div className="explorer-label-subtitle">
+                {isImageExplorerOpen
+                  ? getBaseName(picUrls[explorerImageIndex] || "")
+                  : getBaseName(vidUrls[explorerVideoIndex] || "")}
+              </div>
             </div>
+
+            <div className="explorer-thumbs">
+              {isImageExplorerOpen
+                ? picUrls.map((u, i) => (
+                    <button
+                      key={u}
+                      className={`thumb-item ${i === explorerImageIndex ? "thumb-active" : ""}`}
+                      onClick={() => setExplorerImageIndex(i)}
+                      aria-label={getBaseName(u)}
+                    >
+                      <img src={u} alt={getBaseName(u)} />
+                    </button>
+                  ))
+                : vidUrls.map((u, i) => (
+                    <button
+                      key={u}
+                      className={`thumb-item ${i === explorerVideoIndex ? "thumb-active" : ""}`}
+                      onClick={() => setExplorerVideoIndex(i)}
+                      aria-label={getBaseName(u)}
+                    >
+                      <video src={u} muted playsInline />
+                    </button>
+                  ))}
+            </div>
+
             <div className="explorer-help">Esc cerrar · ← atrás · → adelante</div>
           </div>
         </div>
